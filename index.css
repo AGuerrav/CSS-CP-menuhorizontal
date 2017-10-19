@@ -1,0 +1,35 @@
+body{
+  font-family: sans-serif;
+}
+nav{
+  outline: 1px solid yellow;
+
+}
+ul{
+  /*outline: 1px solid red;/*como es hijo de tipo bloque de nav usa el mismo espacio de nav*/
+  list-style: none; /*sacar viñeta*/
+  padding: 0;
+  margin: 0;
+  background: #2e2e2a;
+  line-height: 45px;
+  overflow: auto; /*es para devovlerle el contexto de bloque a li*/
+
+}
+li{
+  /*outline: 1px solid green;*/
+  width:20%;
+  /*display: inline-block;/*hace que nuestras etiquetas de bloque se posicionen como inline una al lado de otra, pero permitiendonos cambiar su ancho como un bloque*/
+  text-align: center;
+  float: left; /*siempre el elemento contenedor de esto debe tener un overflow:auto para devolverle ele elemento de bloque al elemento*/
+
+}
+a{ /*solo usan el tamaño que necesitan de su contenido*/
+  /*outline: 1px solid blue;*/
+  text-decoration: none;
+  color: #fff;
+  display: block;/*para que ancor ocupe el espacio de su contenedor padre*/
+}
+a:hover{
+  background-color: orange;
+  color: #000;
+}
